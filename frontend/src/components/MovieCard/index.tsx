@@ -1,9 +1,10 @@
 import MovieScore from "components/MovieScore";
+import { Link } from "react-router-dom";
 
 function MovieCard() {
     const movie = {
         id: 1,
-        image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg",
+        image: "https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/02/01-avengers-2012.png",
         title: "The Witcher",
         count: 2,
         score: 4.5
@@ -14,7 +15,10 @@ function MovieCard() {
             <div className="dsmovie-card-bottom-container">
                 <h3>{movie.title}</h3>
                 <MovieScore />
-                <div className="btn btn-primary dsmovie-btn">Avaliar</div>
+                <Link to={`/Form/${movie.id}`}>
+                    <div className="btn btn-primary dsmovie-btn">Avaliar</div>
+                </Link>
+
             </div>
         </div>
     );
