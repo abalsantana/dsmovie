@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function MovieCard() {
     const movie = {
         id: 1,
-        image: "https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/02/01-avengers-2012.png",
-        title: "The Witcher",
+        image: "https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/12/homem-aranha-sem-volta-para-casa.jpg",
+        title: "Homem-Aranha: Sem Volta Para Casa",
         count: 2,
         score: 4.5
     };
