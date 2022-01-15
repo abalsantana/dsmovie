@@ -12,7 +12,6 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-
     private String title;
     private Double score;
     private Integer count;
