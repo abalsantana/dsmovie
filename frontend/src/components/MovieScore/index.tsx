@@ -1,5 +1,4 @@
 import MovieStars from "components/MovieStars";
-import { count } from "console";
 import './styles.css';
 
 
