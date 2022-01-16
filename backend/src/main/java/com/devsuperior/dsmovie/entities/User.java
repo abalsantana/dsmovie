@@ -1,19 +1,23 @@
 package com.devsuperior.dsmovie.entities;
 
-import lombok.Data;
-
 import javax.persistence.*;
 
 @Entity
-@Data
 @Table(name = "tb_user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-
     private String email;
+
+    public User() {
+    }
+
+    public User(Long id, String email) {
+        this.id = id;
+        this.email = email;
+    }
 
     public Long getId() {
         return id;
@@ -23,5 +27,11 @@ public class User {
         this.id = id;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
