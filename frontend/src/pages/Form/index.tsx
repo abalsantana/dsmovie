@@ -1,49 +1,14 @@
-import { Link } from 'react-router-dom';
-import './styles.css';
+import FormCard from 'components/FormCard';
+import { useParams } from 'react-router-dom';
+
+
 
 function Form() {
 
-    const movie = {
-        id: 1,
-        image: "https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/12/homem-aranha-sem-volta-para-casa.jpg",
-        title: "Homem-Aranha: Sem Volta Para Casa",
-        count: 2,
-        score: 4.5
-    };
+    const params = useParams();
 
     return (
-        <div className="dsmovie-form-container">
-            <img className="dsmovie-movie-card-image" src={movie.image} alt={movie.title} />
-            <div className="dsmovie-card-bottom-container">
-                <h3>{movie.title}</h3>
-                <form className="dsmovie-form">
-                    <div className="form-group dsmovie-form-group">
-                        <label htmlFor="email">Informe seu email</label>
-                        <input type="email" className="form-control" id="email" />
-                    </div>
-                    <div className="form-group dsmovie-form-group">
-                        <label htmlFor="score">Informe sua avaliação</label>
-                        <select className="form-control" id="score">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                        </select>
-                    </div>
-                    <div className="dsmovie-form-btn-container">
-                        <button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
-                    </div>
-                </form >
-                <Link to="/">
-                    <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
-                </Link>
-
-            </div >
-        </div >
+        <FormCard movieId={`${params.movieId}`} />
     );
 }
 
