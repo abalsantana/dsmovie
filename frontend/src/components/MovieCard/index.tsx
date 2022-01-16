@@ -1,14 +1,13 @@
 import MovieScore from "components/MovieScore";
 import { Link } from "react-router-dom";
+import { Movie } from "types/movie";
 
-function MovieCard() {
-    const movie = {
-        id: 1,
-        image: "https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/12/homem-aranha-sem-volta-para-casa.jpg",
-        title: "Homem-Aranha: Sem Volta Para Casa",
-        count: 2,
-        score: 4.5
-    };
+type Props = {
+    movie: Movie;
+}
+
+function MovieCard({movie} : Props) {
+    
     return (
         <div>
             <img className="dsmovie-movie-card-image" src={movie.image} alt={movie.title} />
