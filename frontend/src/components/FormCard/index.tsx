@@ -32,8 +32,6 @@ function FormCard( { movieId } : Props) {
         const email = (event.target as any).email.value;
         const score = (event.target as any).score.value;
 
-        console.log(email, score)
-
         //Validação do email
         if(!validateEmail(email)){
             return;
